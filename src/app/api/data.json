@@ -1,0 +1,75 @@
+[
+  
+    {
+      "id": 1,
+      "title": "VENUM Hybrid MMA Gloves BlackGold edition",
+      "price": 670.000,
+      "image": "/glove1.png"
+    },
+    {
+      "id": 2,
+      "title": "UFC Original Gloves",
+      "price": 100,
+      "image": "/glove2.png"
+    },
+    {
+      "id": 3,
+      "title": "VENUM MMA Gloves BlackGold edition",
+      "price": 100,
+      "image": "/glove3.png"
+    },
+    {
+      "id": 4,
+      "title": "VENUM Hybrid MMA Gloves BlackGold edition",
+      "price": 670.000,
+      "image": "/glove1.png"
+    },
+    {
+      "id": 5,
+      "title": "UFC Original Gloves",
+      "price": 100,
+      "image": "/glove2.png"
+    },
+    {
+      "id": 6,
+      "title": "VENUM MMA Gloves BlackGold edition",
+      "price": 100,
+      "image": "/glove3.png"
+    },
+    {
+      "id": 7,
+      "title": "VENUM Hybrid MMA Gloves BlackGold edition",
+      "price": 670.000,
+      "image": "/glove1.png"
+    },
+    {
+      "id": 8,
+      "title": "UFC Original Gloves",
+      "price": 100,
+      "image": "/glove2.png"
+    },
+    {
+      "id": 9,
+      "title": "VENUM MMA Gloves BlackGold edition",
+      "price": 100,
+      "image": "/glove3.png"
+    },
+    {
+      "id": 10,
+      "title": "VENUM Hybrid MMA Gloves BlackGold edition",
+      "price": 670.000,
+      "image": "/glove1.png"
+    },
+    {
+      "id": 11,
+      "title": "UFC Original Gloves",
+      "price": 100,
+      "image": "/glove2.png"
+    },
+    {
+      "id": 12,
+      "title": "VENUM MMA Gloves BlackGold edition",
+      "price": 100,
+      "image": "/glove3.png"
+    }
+  ]
