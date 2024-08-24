@@ -19,6 +19,7 @@ export default function Page1() {
         layout="fill"
         objectFit="cover"
         quality={100}
+        unoptimized
       />
       <div className="relative flex flex-col h-full items-center justify-center">
         <h1

@@ -1,9 +1,9 @@
 import React from "react";
-import Page1 from "@/components/pages/page1";
-import Page2 from "@/components/pages/page2";
-import Page3 from "@/components/pages/page3";
-import Page4 from "@/components/pages/page4";
-import Page5 from "@/components/pages/page5";
+import Page1 from "@/components/lembar/page1";
+import Page2 from "@/components/lembar/page2";
+import Page3 from "@/components/lembar/page3";
+import Page4 from "@/components/lembar/page4";
+import Page5 from "@/components/lembar/page5";
 
 export default function HomePage() {
   return (
@@ -16,7 +16,7 @@ export default function HomePage() {
         <Page2 />
       </div>
 
-      <div className="">
+      <div >
         <Page3 />
       </div>
 
