@@ -1,12 +1,9 @@
 import Image from "next/image";
 
-// Utilitas untuk mengambil data
+// Fungsi untuk mengambil data dari API
 async function fetchProducts() {
   const res = await fetch("http://localhost:3000/api/products", {
     cache: "no-store",
-    next: {
-      tags: ["product"],
-    },
   });
 
   if (!res.ok) {
@@ -17,11 +14,7 @@ async function fetchProducts() {
 }
 
 // Komponen halaman utama
-type BarangPageProps = { params: { slug: string[] } };
-
-export default async function BarangPage({ params }: BarangPageProps) {
-  const barangs = await fetchProducts();
-
+export default function BarangPage({ barangs }: { barangs: any }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 pt-16 place-items-center">
       {barangs.data && barangs.data.length > 0 ? (
@@ -64,4 +57,12 @@ export default async function BarangPage({ params }: BarangPageProps) {
       )}
     </div>
   );
+}
+
+// Fungsi untuk mendapatkan data pada server-side
+export async function getServerSideProps() {
+  const barangs = await fetchProducts();
+  return {
+    props: { barangs },
+  };
 }
