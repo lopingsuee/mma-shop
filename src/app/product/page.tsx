@@ -1,27 +1,29 @@
 import Image from "next/image";
 
-export const getData = async (params: { slug: string[]; }) => {
-    const res = await fetch("http://localhost:3000/api/products", {
-      cache: "no-store",
-      next: {
-        tags: ["product"],
-      },
-    });
-  
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
-  };
-  
+// Utilitas untuk mengambil data
+async function fetchProducts() {
+  const res = await fetch("http://localhost:3000/api/products", {
+    cache: "no-store",
+    next: {
+      tags: ["product"],
+    },
+  });
 
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+// Komponen halaman utama
 type BarangPageProps = { params: { slug: string[] } };
-export default async function BarangPage(props: BarangPageProps) {
-  const { params } = props;
-  const barangs = await getData(params);
+
+export default async function BarangPage({ params }: BarangPageProps) {
+  const barangs = await fetchProducts();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4  pt-16 place-items-center">
+    <div className="grid grid-cols-1 md:grid-cols-4 pt-16 place-items-center">
       {barangs.data && barangs.data.length > 0 ? (
         barangs.data.map((barang: any) => (
           <div
@@ -29,13 +31,13 @@ export default async function BarangPage(props: BarangPageProps) {
             className="w-full max-w-sm bg-white border border-black rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-5"
           >
             <a href="/home">
-            <Image
-                        className="p-2 object-fit  md:h-64"
-                        src={barang.image}
-                        alt={barang.title}
-                        width={300}
-                        height={200}
-                      />
+              <Image
+                className="p-2 object-fit md:h-64"
+                src={barang.image}
+                alt={barang.title}
+                width={300}
+                height={200}
+              />
             </a>
             <div className="px-5 pb-5">
               <a href="#">
