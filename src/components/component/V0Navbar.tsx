@@ -65,9 +65,21 @@ export default function V0Navbar() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-lg">Mixed Martial Art</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-lg">
+                Mixed Martial Art
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
-                {/* Content here */}
+                <ul className="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                  <li className="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <a href="/product">Boxing Glove</a>
+                  </li>
+                  <li className="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                    <a href="/product">MMA Gloves</a>
+                  </li>
+                  <li className="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                    <a href="/product">Dumbell</a>
+                  </li>
+                </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -76,9 +88,21 @@ export default function V0Navbar() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-lg">Fitness</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-lg">
+                Fitness
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul></ul>
+                <ul className="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                  <li className="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <a href="/product">Dip Bar</a>
+                  </li>
+                  <li className="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                    <a href="/product">Pull Up Bar</a>
+                  </li>
+                  <li className="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                    <a href="/product">Dumbell</a>
+                  </li>
+                </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -87,9 +111,21 @@ export default function V0Navbar() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-lg">Men</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-lg">
+                Calisthenic
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul></ul>
+                <ul className="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                  <li className="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <a href="/product">Dip Bar</a>
+                  </li>
+                  <li className="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                    <a href="/product">Pull Up Bar</a>
+                  </li>
+                  <li className="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                    <a href="/product">Dumbell</a>
+                  </li>
+                </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -98,9 +134,21 @@ export default function V0Navbar() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-lg">Women</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-lg">
+                Boxing
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul></ul>
+                <ul className="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                  <li className="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                    <a href="/product">Dip Bar</a>
+                  </li>
+                  <li className="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                    <a href="/product">Pull Up Bar</a>
+                  </li>
+                  <li className="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">
+                    <a href="/product">Dumbell</a>
+                  </li>
+                </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -117,7 +165,6 @@ export default function V0Navbar() {
         </NavigationMenu>
       </nav>
 
-
       <div className="flex items-center gap-4">
         <Sheet>
           <SheetTrigger asChild>
@@ -127,28 +174,19 @@ export default function V0Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[200px]">
-            <nav className="grid gap-4 p-4">
+            <nav className=" flex flex-col items-center  gap-4 p-4">
               <NavigationMenu>
                 <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <Link href="/home">
-                      Home
-                    </Link>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
+                  <NavigationMenuItem className="bg-background border border-black rounded">
+                    <Image
+                    src="/navwow.jpg"
+                    height={200}
+                    width={200}
+                    alt="Logo"></Image>
+                    <p>mager cuk lanjut nanti, liat mode dekstop aja</p>
+                    <button className="bg-black text-white rounded-xl mt-5 px-4 py-2 hover:bg-slate-300"><a href="/">bakal balik ke home</a></button>
 
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger>
-                      Mixed Martial Art
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul>
-                        <li>apaan</li>
-                      </ul>
-                    </NavigationMenuContent>
+                    <button className="bg-black text-white rounded-xl mt-5 px-4 py-2 hover:bg-slate-300"><a href="/product">ke produk nih</a></button>
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 export const getData = async (params: { slug: string[]; }) => {
     const res = await fetch("http://localhost:3000/api/products", {
@@ -20,7 +21,7 @@ export default async function BarangPage(props: BarangPageProps) {
   const barangs = await getData(params);
 
   return (
-    <div className="grid grid-cols-4 mt-5 place-items-center">
+    <div className="grid grid-cols-1 md:grid-cols-4  pt-16 place-items-center">
       {barangs.data && barangs.data.length > 0 ? (
         barangs.data.map((barang: any) => (
           <div
@@ -28,11 +29,13 @@ export default async function BarangPage(props: BarangPageProps) {
             className="w-full max-w-sm bg-white border border-black rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-5"
           >
             <a href="/home">
-              <img
-                className="p-8 rounded-t-lg object-cover h-96 w-full"
-                src={barang.image}
-                alt={barang.title}
-              />
+            <Image
+                        className="p-2 object-fit  md:h-64"
+                        src={barang.image}
+                        alt={barang.title}
+                        width={300}
+                        height={200}
+                      />
             </a>
             <div className="px-5 pb-5">
               <a href="#">

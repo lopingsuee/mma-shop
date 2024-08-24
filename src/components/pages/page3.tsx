@@ -1,5 +1,5 @@
 
-import ClientComponent from "./page4";
+import ClientComponent from "./page3client";
 
 export const getData = async (params: { slug: string[] } = { slug: [] }) => {
   const res = await fetch("http://localhost:3000/api/products", {

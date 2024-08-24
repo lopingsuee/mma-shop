@@ -2,6 +2,8 @@ import React from "react";
 import Page1 from "@/components/pages/page1";
 import Page2 from "@/components/pages/page2";
 import Page3 from "@/components/pages/page3";
+import Page4 from "@/components/pages/page4";
+import Page5 from "@/components/pages/page5";
 
 export default function HomePage() {
   return (
@@ -15,12 +17,15 @@ export default function HomePage() {
       </div>
 
       <div className="">
-        <Page3  params={{
-          slug: []
-        }} />
+        <Page3 />
       </div>
 
-      
+    <div>
+      <Page4 />
+    </div>
+      <div>
+        <Page5/>
+      </div>
     </div>
   );
 }
