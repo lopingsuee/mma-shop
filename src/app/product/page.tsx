@@ -1,20 +1,24 @@
-import Image from "next/image";
+// app/product/page.tsx
+import Image from 'next/image';
 
-// Fungsi untuk mengambil data dari API
 async function fetchProducts() {
-  const res = await fetch("http://localhost:3000/api/products", {
-    cache: "no-store",
+  const res = await fetch('http://localhost:3000/api/products', {
+    cache: 'no-store',
+    next: {
+      tags: ['product'],
+    },
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error('Failed to fetch data');
   }
 
   return res.json();
 }
 
-// Komponen halaman utama
-export default function BarangPage({ barangs }: { barangs: any }) {
+export default async function ProductPage() {
+  const barangs = await fetchProducts();
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 pt-16 place-items-center">
       {barangs.data && barangs.data.length > 0 ? (
@@ -57,12 +61,4 @@ export default function BarangPage({ barangs }: { barangs: any }) {
       )}
     </div>
   );
-}
-
-// Fungsi untuk mendapatkan data pada server-side
-export async function getServerSideProps() {
-  const barangs = await fetchProducts();
-  return {
-    props: { barangs },
-  };
 }
