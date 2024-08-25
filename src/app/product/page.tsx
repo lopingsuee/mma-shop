@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 async function fetchProducts() {
-  const res = await fetch('http://localhost:3000/api/products');
+  const res = await fetch('https://mma-shop-nyobanext.vercel.app/api/products');
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');
