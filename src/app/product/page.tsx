@@ -3,10 +3,14 @@ import Image from 'next/image';
 
 async function fetchProducts() {
   const res = await fetch('https://mma-shop-nyobanext-8essp3wyz-aditya-umars-projects.vercel.app/api/products', {
-    cache: 'no-store',
-    next: {
-      tags: ['product'],
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
     },
+    next: {
+      revalidate: 0,
+    },
+
   });
 
   if (!res.ok) {

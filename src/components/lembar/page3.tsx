@@ -1,12 +1,16 @@
 import ClientComponent from "./page3client";
 
 export const getData = async (params: { slug: string[] } = { slug: [] }) => {
-  const res = await fetch("https://mma-shop-nyobanext-8essp3wyz-aditya-umars-projects.vercel.app/api/products", {
-    cache: "no-store",
+  const res = await fetch('https://mma-shop-nyobanext-8essp3wyz-aditya-umars-projects.vercel.app/api/products', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
     next: {
-      tags: ["product"],
+      revalidate: 0,
     },
   });
+
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }

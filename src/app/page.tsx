@@ -5,6 +5,8 @@ import Page3 from "@/components/lembar/page3";
 import Page4 from "@/components/lembar/page4";
 import Page5 from "@/components/lembar/page5";
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
   return (
     <div className="md:flex flex-col w-[100%]">
