@@ -1,7 +1,7 @@
 import ClientComponent from "./page3client";
 
 export const getData = async (params: { slug: string[] } = { slug: [] }) => {
-  const res = await fetch("http://localhost:3000/api/products", {
+  const res = await fetch("https://mma-shop-nyobanext-8essp3wyz-aditya-umars-projects.vercel.app/api/products", {
     cache: "no-store",
     next: {
       tags: ["product"],
